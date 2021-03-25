@@ -1,6 +1,6 @@
 import React from "react";
 import {css, styled, connect} from "frontity";
-import {mq} from "./mq";
+import mq from "./mq";
 
 const RowComponent = ({
   children,

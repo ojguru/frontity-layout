@@ -1,6 +1,6 @@
 import React from "react";
 import {styled, connect} from "frontity";
-import {mq} from "./mq";
+import mq from "./mq";
 
 const Section = ({
   state, children, className, id, as, 
