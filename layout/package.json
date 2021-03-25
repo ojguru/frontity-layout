@@ -1,0 +1,26 @@
+{
+  "name": "frontity-layout",
+  "version": "1.0.0",
+  "description": "Sistema de layout para usar en frontity",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ojguru/frontity-layout.git"
+  },
+  "keywords": [
+    "Frontity"
+  ],
+  "author": "ojguru",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ojguru/frontity-layout/issues"
+  },
+  "homepage": "https://github.com/ojguru/frontity-layout#readme",
+  "dependencies": {
+    "frontity": "^1.14.3",
+    "react": "^17.0.2"
+  }
+}
