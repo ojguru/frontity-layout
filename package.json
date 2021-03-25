@@ -1,5 +1,5 @@
 {
-  "name": "frontity-layout",
+  "name": "@osirispp/frontity-layout",
   "version": "1.0.0",
   "description": "Sistema de layout para usar en frontity",
   "main": "index.js",
@@ -13,7 +13,7 @@
   "keywords": [
     "Frontity"
   ],
-  "author": "ojguru",
+  "author": "osirispp",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ojguru/frontity-layout/issues"
