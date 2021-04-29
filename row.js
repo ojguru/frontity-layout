@@ -2,32 +2,23 @@ import React from "react";
 import {css, styled, connect} from "frontity";
 import mq from "./mq";
 
-const RowComponent = ({
-  children,
-  alignCenter=false, alignSMCenter=false, alignMDCenter=false, alignLGCenter=false, alignXLCenter=false,
-  alignItems=false, alignSMItems=false, alignMDItems=false, alignLGItems=false, alignXLItems=false,
-  alignContent=false, alignSMContent=false, alignMDContent=false, alignLGContent=false, alignXLContent=false,
-  justifyContent=false, justifySMContent=false, justifyMDContent=false, justifyLGContent=false, justifyXLContent=false,
-}) => {
+const RowComponent = (props) => {
 
-  return <Row {...{
-    alignCenter, alignSMCenter, alignMDCenter, alignLGCenter, alignXLCenter,
-    alignItems, alignSMItems, alignMDItems, alignLGItems, alignXLItems,
-    alignContent, alignSMContent, alignMDContent, alignLGContent, alignXLContent,
-    justifyContent, justifySMContent, justifyMDContent, justifyLGContent, justifyXLContent,
-  }}>
-    {children}
+  return <Row {...props}>
+    {props.children}
   </Row>
+
 }
 
 export default connect(RowComponent);
 
 const Row = styled.div`
   ${({
-    alignCenter, alignSMCenter, alignMDCenter, alignLGCenter, alignXLCenter,
-    alignItems, alignSMItems, alignMDItems, alignLGItems, alignXLItems,
-    alignContent, alignSMContent, alignMDContent, alignLGContent, alignXLContent,
-    justifyContent, justifySMContent, justifyMDContent, justifyLGContent, justifyXLContent,
+    alignCenter=false, alignSMCenter=false, alignMDCenter=false, alignLGCenter=false, alignXLCenter=false,
+    alignItems=false, alignSMItems=false, alignMDItems=false, alignLGItems=false, alignXLItems=false, 
+    reverse=false, reverseSM=false, reverseMD=false, reverseLG=false, reverseXL=false,
+    alignContent=false, alignSMContent=false, alignMDContent=false, alignLGContent=false, alignXLContent=false,
+    justifyContent=false, justifySMContent=false, justifyMDContent=false, justifyLGContent=false, justifyXLContent=false,
   })=>css`
     display: flex;
     flex-wrap: wrap;
@@ -35,97 +26,121 @@ const Row = styled.div`
     margin-right: -15px;
 
     // Alignment
-    ${alignCenter? `align-items: center;`: ""}
-    ${alignSMCenter? `
+    ${alignCenter? css`align-items: center;`: ""}
+    ${alignSMCenter? css`
       ${mq.sm}{
         align-items: center;
       }
     `: ""}
-    ${alignMDCenter? `
+    ${alignMDCenter? css`
         ${mq.md}{
         align-items: center;
       }
     `: ""}
-    ${alignLGCenter? `
+    ${alignLGCenter? css`
         ${mq.lg}{
         align-items: center;
       }
     `: ""}
-    ${alignXLCenter? `
+    ${alignXLCenter? css`
         ${mq.xl}{
         align-items: center;
       }
     `: ""}
 
-    ${alignItems? `
+    ${alignItems? css`
       align-items: ${alignItems};
     `: ""}
-    ${alignSMItems? `
+    ${alignSMItems? css`
       ${mq.sm}{
         align-items: ${alignSMItems};
       }
     `: ""}
-    ${alignMDItems? `
+    ${alignMDItems? css`
       ${mq.md}{
         align-items: ${alignMDItems};
       }
     `: ""}
-    ${alignLGItems? `
+    ${alignLGItems? css`
       ${mq.lg}{
         align-items: ${alignLGItems};
       }
     `: ""}
-    ${alignXLItems? `
+    ${alignXLItems? css`
       ${mq.xl}{
         align-items: ${alignXLItems};
       }
     `: ""}
 
-    ${alignContent? `
+    ${alignContent? css`
       align-content: ${alignContent};
     `: ""}
-    ${alignSMContent? `
+    ${alignSMContent? css`
       ${mq.sm}{
         align-content: ${alignSMContent};
       }
     `: ""}
-    ${alignMDContent? `
+    ${alignMDContent? css`
       ${mq.md}{
         align-content: ${alignMDContent};
       }
     `: ""}
-    ${alignLGContent? `
+    ${alignLGContent? css`
       ${mq.lg}{
         align-content: ${alignLGContent};
       }
     `: ""}
-    ${alignXLContent? `
+    ${alignXLContent? css`
       ${mq.xl}{
         align-content: ${alignXLContent};
       }
     `: ""}
 
-    ${justifyContent? `
+    ${justifyContent? css`
       justify-content: ${justifyContent};
     `: ""}
-    ${justifySMContent? `
+    ${justifySMContent? css`
       ${mq.sm}{
         justify-content: ${justifySMContent};
       }
     `: ""}
-    ${justifyMDContent? `
+    ${justifyMDContent? css`
       ${mq.md}{
         justify-content: ${justifyMDContent};
       }
     `: ""}
-    ${justifyLGContent? `
+    ${justifyLGContent? css`
       ${mq.lg}{
         justify-content: ${justifyLGContent};
       }
     `: ""}
-    ${justifyXLContent? `
+    ${justifyXLContent? css`
       ${mq.xl}{
         justify-content: ${justifyXLContent};
+      }
+    `: ""}
+
+    ${reverse? css`
+      flex-direction: row-reverse;
+    `: ""}
+    ${reverseSM? css`
+      ${mq.sm}{
+        flex-direction: row-reverse;
+      }
+    `: ""}
+    ${reverseMD? css`
+      ${mq.md}{
+        flex-direction: row-reverse;
+      }
+    `: ""}
+    ${reverseLG? css`
+      ${mq.lg}{
+        flex-direction: row-reverse;
+      }
+    `: ""}
+    ${reverseXL? css`
+      ${mq.xl}{
+        flex-direction: row-reverse;
       }
     `: ""}
   `}

@@ -31,128 +31,128 @@ const Col = styled.div`
         zIndex, zIndexSM, zIndexMD, zIndexLG, zIndexXL,
     })=>css`
 
-        ${!size || size == true? `flex-basis: 0;`: ""}
-        ${!size || size == true? `flex-grow: 1;`: ""}
-        ${size == "auto"? `flex: 0 0 ${size};` : parseInt(size)? `flex: 0 0 ${colSize(size)};` : "" }
+        ${!size || size == true? css`flex-basis: 0;`: ""}
+        ${!size || size == true? css`flex-grow: 1;`: ""}
+        ${size == "auto"? css`flex: 0 0 ${size};` : parseInt(size)? css`flex: 0 0 ${colSize(size)};` : "" }
         max-width: ${ parseInt(size) ? colSize(size)+";" : '100%;'}
         width: ${ size == "auto"? size+";" : "100%;"}
         position: relative;
         padding-left: 15px;
         padding-right: 15px;
-        ${sizeSM ? `
+        ${sizeSM ? css`
             ${mq.sm}{
-                ${sizeSM == true? `flex-basis: 0;`: ""}
-                ${ sizeSM == true? `flex-grow: 1;`: ""}
-                ${ sizeSM == "auto"? `flex: 0 0 ${sizeSM};` : parseInt(sizeSM)? `flex: 0 0 ${colSize(sizeSM)};` : "" }
+                ${sizeSM == true? css`flex-basis: 0;`: ""}
+                ${ sizeSM == true? css`flex-grow: 1;`: ""}
+                ${ sizeSM == "auto"? css`flex: 0 0 ${sizeSM};` : parseInt(sizeSM)? css`flex: 0 0 ${colSize(sizeSM)};` : "" }
                 max-width: ${ parseInt(sizeSM) ? colSize(sizeSM)+";" : '100%;'}
                 width: ${ sizeSM == "auto"? sizeSM+";" : "100%;"}
             }
         `: ""}
-        ${sizeMD ? `
+        ${sizeMD ? css`
             ${mq.md}{
-                ${sizeMD == true? `flex-basis: 0;`: ""}
-                ${ sizeMD == true? `flex-grow: 1;`: ""}
-                ${ sizeMD == "auto"? `flex: 0 0 ${sizeMD};` : parseInt(sizeMD)? `flex: 0 0 ${colSize(sizeMD)};` : "" }
+                ${sizeMD == true? css`flex-basis: 0;`: ""}
+                ${ sizeMD == true? css`flex-grow: 1;`: ""}
+                ${ sizeMD == "auto"? css`flex: 0 0 ${sizeMD};` : parseInt(sizeMD)? css`flex: 0 0 ${colSize(sizeMD)};` : "" }
                 max-width: ${ parseInt(sizeMD) ? colSize(sizeMD)+";" : '100%;'}
                 width: ${ sizeMD == "auto"? sizeMD+";" : "100%;"}
             }
         `: ""}
-        ${sizeLG ? `
+        ${sizeLG ? css`
             ${mq.lg}{
-                ${sizeLG == true? `flex-basis: 0;`: ""}
-                ${ sizeLG == true? `flex-grow: 1;`: ""}
-                ${ sizeLG == "auto"? `flex: 0 0 ${sizeLG};` : parseInt(sizeLG)? `flex: 0 0 ${colSize(sizeLG)};` : "" }
+                ${sizeLG == true? css`flex-basis: 0;`: ""}
+                ${ sizeLG == true? css`flex-grow: 1;`: ""}
+                ${ sizeLG == "auto"? css`flex: 0 0 ${sizeLG};` : parseInt(sizeLG)? css`flex: 0 0 ${colSize(sizeLG)};` : "" }
                 max-width: ${ parseInt(sizeLG) ? colSize(sizeLG)+";" : '100%;'}
                 width: ${ sizeLG == "auto"? sizeLG+";" : "100%;"}
             }
         `: ""}
-        ${sizeXL ? `
+        ${sizeXL ? css`
             ${mq.xl}{
-                ${sizeXL == true? `flex-basis: 0;`: ""}
-                ${ sizeXL == true? `flex-grow: 1;`: ""}
-                ${ sizeXL == "auto"? `flex: 0 0 ${sizeXL};` : parseInt(sizeXL)? `flex: 0 0 ${colSize(sizeXL)};` : "" }
+                ${sizeXL == true? css`flex-basis: 0;`: ""}
+                ${ sizeXL == true? css`flex-grow: 1;`: ""}
+                ${ sizeXL == "auto"? css`flex: 0 0 ${sizeXL};` : parseInt(sizeXL)? css`flex: 0 0 ${colSize(sizeXL)};` : "" }
                 max-width: ${ parseInt(sizeXL) ? colSize(sizeXL)+";" : '100%;'}
                 width: ${ sizeXL == "auto"? sizeXL+";" : "100%;"}
             }
         `: ""}
 
-        ${order ? `
+        ${order ? css`
             order:${order};
         ` : ""}
-        ${orderSM ? `
+        ${orderSM ? css`
             ${mq.sm}{
                 order:${orderSM};
             }
         ` : ""}
-        ${orderMD ? `
+        ${orderMD ? css`
             ${mq.md}{
                 order:${orderMD};
             }
         ` : ""}
-        ${orderLG ? `
+        ${orderLG ? css`
             ${mq.lg}{
                 order:${orderLG};
             }
         ` : ""}
-        ${orderXL ? `
+        ${orderXL ? css`
             ${mq.xl}{
                 order:${orderXL};
             }
         ` : ""}
 
         // Gutters
-        ${noGutters ? `
+        ${noGutters ? css`
             padding-left: 0px;
             padding-right: 0px;
         ` : ``}
-        ${noGuttersSM ? `
+        ${noGuttersSM ? css`
             ${mq.sm}{
                 padding-left: 0px;
                 padding-right: 0px;
             }
         ` : ""}
-        ${noGuttersMD ? `
+        ${noGuttersMD ? css`
             ${mq.md}{
                 padding-left: 0px;
                 padding-right: 0px;
             }
         ` : ""}
-        ${noGuttersLG ? `
+        ${noGuttersLG ? css`
             ${mq.lg}{
                 padding-left: 0px;
                 padding-right: 0px;
             }
         ` : ""}
-        ${noGuttersXL ? `
+        ${noGuttersXL ? css`
             ${mq.xl}{
                 padding-left: 0px;
                 padding-right: 0px;
             }
         ` : ""}
 
-        ${gutters ? `
+        ${gutters ? css`
             padding-left: 15px;
             padding-right: 15px;
         ` : ``}
-        ${guttersSM ? `
+        ${guttersSM ? css`
             ${mq.sm}{
                 padding-left: 15px;
                 padding-right: 15px;
             }
         ` : ""}
-        ${guttersMD ? `
+        ${guttersMD ? css`
             ${mq.md}{
                 padding-left: 15px;
                 padding-right: 15px;
             }
         ` : ""}
-        ${guttersLG ? `
+        ${guttersLG ? css`
             ${mq.lg}{
                 padding-left: 15px;
                 padding-right: 15px;
             }
         ` : ""}
-        ${guttersXL ? `
+        ${guttersXL ? css`
             ${mq.xl}{
                 padding-left: 15px;
                 padding-right: 15px;
@@ -160,311 +160,311 @@ const Col = styled.div`
         ` : ""}
 
         // Right Gutter
-        ${noRGutters ? `
+        ${noRGutters ? css`
             padding-right: 0px;
         ` : ``}
-        ${noRGuttersSM ? `
+        ${noRGuttersSM ? css`
             ${mq.sm}{
                 padding-right: 0px;
             }
         ` : ""}
-        ${noRGuttersMD ? `
+        ${noRGuttersMD ? css`
             ${mq.md}{
                 padding-right: 0px;
             }
         ` : ""}
-        ${noRGuttersLG ? `
+        ${noRGuttersLG ? css`
             ${mq.lg}{
                 padding-right: 0px;
             }
         ` : ""}
-        ${noRGuttersXL ? `
+        ${noRGuttersXL ? css`
             ${mq.xl}{
                 padding-right: 0px;
             }
         ` : ""}
 
-        ${rGutters ? `
+        ${rGutters ? css`
             padding-right: 15px;
         ` : ``}
-        ${rGuttersSM ? `
+        ${rGuttersSM ? css`
             ${mq.sm}{
                 padding-right: 15px;
             }
         ` : ""}
-        ${rGuttersMD ? `
+        ${rGuttersMD ? css`
             ${mq.md}{
                 padding-right: 15px;
             }
         ` : ""}
-        ${rGuttersLG ? `
+        ${rGuttersLG ? css`
             ${mq.lg}{
                 padding-right: 15px;
             }
         ` : ""}
-        ${rGuttersXL ? `
+        ${rGuttersXL ? css`
             ${mq.xl}{
                 padding-right: 15px;
             }
         ` : ""}
 
         // Left Gutter
-        ${noLGutters ? `
+        ${noLGutters ? css`
             padding-left: 0px;
         ` : ``}
-        ${noLGuttersSM ? `
+        ${noLGuttersSM ? css`
             ${mq.sm}{
                 padding-left: 0px;
             }
         ` : ""}
-        ${noLGuttersMD ? `
+        ${noLGuttersMD ? css`
             ${mq.md}{
                 padding-left: 0px;
             }
         ` : ""}
-        ${noLGuttersLG ? `
+        ${noLGuttersLG ? css`
             ${mq.lg}{
                 padding-left: 0px;
             }
         ` : ""}
-        ${noLGuttersXL ? `
+        ${noLGuttersXL ? css`
             ${mq.xl}{
                 padding-left: 0px;
             }
         ` : ""}
 
-        ${lGutters ? `
+        ${lGutters ? css`
             padding-left: 15px;
         ` : ``}
-        ${lGuttersSM ? `
+        ${lGuttersSM ? css`
             ${mq.sm}{
                 padding-left: 15px;
             }
         ` : ""}
-        ${lGuttersMD ? `
+        ${lGuttersMD ? css`
             ${mq.md}{
                 padding-left: 15px;
             }
         ` : ""}
-        ${lGuttersLG ? `
+        ${lGuttersLG ? css`
             ${mq.lg}{
                 padding-left: 15px;
             }
         ` : ""}
-        ${lGuttersXL ? `
+        ${lGuttersXL ? css`
             ${mq.xl}{
                 padding-left: 15px;
             }
         ` : ""}
 
         // Alingment
-        ${mxAuto ? `
+        ${mxAuto ? css`
             margin-left: auto;
             margin-right: auto;
         `:""}
-        ${mxSMAuto ? `
+        ${mxSMAuto ? css`
             ${mq.sm}{
                 margin-left: auto;
                 margin-right: auto;
             }
         `:""}
-        ${mxMDAuto ? `
+        ${mxMDAuto ? css`
             ${mq.md}{
                 margin-left: auto;
                 margin-right: auto;
             }
         `:""}
-        ${mxLGAuto ? `
+        ${mxLGAuto ? css`
             ${mq.lg}{
                 margin-left: auto;
                 margin-right: auto;
             }
         `:""}
-        ${mxXLAuto ? `
+        ${mxXLAuto ? css`
             ${mq.xl}{
                 margin-left: auto;
                 margin-right: auto;
             }
         `:""}
 
-        ${mlAuto ? `
+        ${mlAuto ? css`
             margin: initial;
             margin-left: auto;
         `:""}
-        ${mlSMAuto ? `
+        ${mlSMAuto ? css`
             ${mq.sm}{
                 margin: initial;
                 margin-left: auto;
             }
         `:""}
-        ${mlMDAuto ? `
+        ${mlMDAuto ? css`
             ${mq.md}{
                 margin: initial;
                 margin-left: auto;
             }
         `:""}
-        ${mlLGAuto ? `
+        ${mlLGAuto ? css`
             ${mq.lg}{
                 margin: initial;
                 margin-left: auto;
             }
         `:""}
-        ${mlXLAuto ? `
+        ${mlXLAuto ? css`
             ${mq.xl}{
                 margin: initial;
                 margin-left: auto;
             }
         `:""}
 
-        ${mrAuto ? `
+        ${mrAuto ? css`
             margin: initial;
             margin-right: auto;
         `:""}
-        ${mrSMAuto ? `
+        ${mrSMAuto ? css`
             ${mq.sm}{
                 margin: initial;
                 margin-right: auto;
             }
         `:""}
-        ${mrMDAuto ? `
+        ${mrMDAuto ? css`
             ${mq.md}{
                 margin: initial;
                 margin-right: auto;
             }
         `:""}
-        ${mrLGAuto ? `
+        ${mrLGAuto ? css`
             ${mq.lg}{
                 margin: initial;
                 margin-right: auto;
             }
         `:""}
-        ${mrXLAuto ? `
+        ${mrXLAuto ? css`
             ${mq.xl}{
                 margin: initial;
                 margin-right: auto;
             }
         `:""}
 
-        // ${hidden ? `
+        // ${hidden ? css`
         //     display: none;
         // `:""}
-        ${hiddenSM ? `
+        ${hiddenSM ? css`
             ${mq.sm}{
                 display: none;
             }
         `:""}
-        ${hiddenMD ? `
+        ${hiddenMD ? css`
             ${mq.md}{
                 display: none;
             }
         `:""}
-        ${hiddenLG ? `
+        ${hiddenLG ? css`
             ${mq.lg}{
                 display: none;
             }
         `:""}
-        ${hiddenXL ? `
+        ${hiddenXL ? css`
             ${mq.xl}{
                 display: none;
             }
         `:""}
 
-        ${visible ? `
+        ${visible ? css`
             display: block;
         `:""}
-        ${visibleSM ? `
+        ${visibleSM ? css`
             ${mq.sm}{
                 display: block;
             }
         `:""}
-        ${visibleMD ? `
+        ${visibleMD ? css`
             ${mq.md}{
                 display: block;
             }
         `:""}
-        ${visibleLG ? `
+        ${visibleLG ? css`
             ${mq.lg}{
                 display: block;
             }
         `:""}
-        ${visibleXL ? `
+        ${visibleXL ? css`
             ${mq.xl}{
                 display: block;
             }
         `:""}
 
-        ${alignSelf? `
+        ${alignSelf? css`
             align-Self: ${alignSelf};
         `: ""}
-        ${alignSMSelf? `
+        ${alignSMSelf? css`
             ${mq.sm}{
             align-Self: ${alignSMSelf};
             }
         `: ""}
-        ${alignMDSelf? `
+        ${alignMDSelf? css`
             ${mq.md}{
             align-Self: ${alignMDSelf};
             }
         `: ""}
-        ${alignLGSelf? `
+        ${alignLGSelf? css`
             ${mq.lg}{
             align-Self: ${alignLGSelf};
             }
         `: ""}
-        ${alignXLSelf? `
+        ${alignXLSelf? css`
             ${mq.xl}{
             align-Self: ${alignXLSelf};
             }
         `: ""}
 
-        ${zIndex ? `
+        ${zIndex ? css`
             z-index:${zIndex};
         ` : ""}
-        ${zIndexSM ? `
+        ${zIndexSM ? css`
             ${mq.sm}{
                 z-index:${zIndexSM};
             }
         ` : ""}
-        ${zIndexMD ? `
+        ${zIndexMD ? css`
             ${mq.md}{
                 z-index:${zIndexMD};
             }
         ` : ""}
-        ${zIndexLG ? `
+        ${zIndexLG ? css`
             ${mq.lg}{
                 z-index:${zIndexLG};
             }
         ` : ""}
-        ${zIndexXL ? `
+        ${zIndexXL ? css`
             ${mq.xl}{
                 z-index:${zIndexXL};
             }
         ` : ""}
 
-        ${alignCenter? `
+        ${alignCenter? css`
             display: flex;
             align-items: center;`
             : ""
         }
-        ${alignSMCenter? `
+        ${alignSMCenter? css`
             ${mq.sm}{
                 display: flex;
                 align-items: center;
             }
         `: ""}
-        ${alignMDCenter? `
+        ${alignMDCenter? css`
             ${mq.md}{
                 display: flex;
                 align-items: center;
             }
         `: ""}
-        ${alignLGCenter? `
+        ${alignLGCenter? css`
             ${mq.lg}{
                 display: flex;
                 align-items: center;
             }
         `: ""}
-        ${alignXLCenter? `
+        ${alignXLCenter? css`
             ${mq.xl}{
                 display: flex;
                 align-items: center;

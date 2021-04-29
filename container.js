@@ -2,34 +2,26 @@ import React from "react";
 import {css, styled, connect} from "frontity";
 import mq from "./mq";
 
-const ContainerComponent = ({
-  state, actions, libraries, children,
-  fluid=false, fluidMD=false, fluidLG=false, fluidXL=false, notFluidMD=false, notFluidLG=false, notFluidXL=false,
-  noGutters=false, space=false, 
-  sizeSM="540px", sizeMD="720px", sizeLG="960px", sizeXL="1140px"
-}) =>{
+const ContainerComponent = (props) =>{
 
-  const spaceSizes = {
-    s: "2rem",
-    m: "4rem",
-    l: "6rem",
-  }
-
-  return <Container {...{
-    fluid, fluidMD, fluidLG, fluidXL, notFluidMD, notFluidLG, notFluidXL,
-    noGutters, space, spaceSizes, sizeSM, sizeMD, sizeLG, sizeXL
-  }}>
-    {children}
+  return <Container {...props}>
+    {props.children}
   </Container>
   
 } 
 
 export default connect(ContainerComponent);
 
+const spaceSizes = {
+  s: "2rem",
+  m: "4rem",
+  l: "6rem",
+}
+
 const Container = styled.div`
   ${({
-    fluid, fluidMD, fluidLG, fluidXL, notFluidMD, notFluidLG, notFluidXL,
-    noGutters, space, spaceSizes, sizeSM, sizeMD, sizeLG, sizeXL
+    fluid=false, fluidMD=false, fluidLG=false, fluidXL=false, notFluidMD=false, notFluidLG=false, notFluidXL=false,
+    noGutters=false, space=false, sizeSM="540px", sizeMD="720px", sizeLG="960px", sizeXL="1140px"
   })=>css`
     width: 100%;
     max-width: 100%;
@@ -37,7 +29,7 @@ const Container = styled.div`
     padding-right: 15px;
     position: relative;
     ${!fluid && "margin: 0 auto"};
-    ${!fluid?`
+    ${!fluid? css`
       ${mq.sm}{
         max-width: ${sizeSM};
       }
@@ -53,7 +45,7 @@ const Container = styled.div`
       `:null
     };
 
-    ${notFluidMD?`
+    ${notFluidMD? css`
       ${mq.sm}{
         max-width: ${sizeSM};
         margin: 0 auto;
@@ -73,7 +65,7 @@ const Container = styled.div`
       `:null
     };
 
-    ${fluidMD?`
+    ${fluidMD? css`
       ${mq.md}{
           max-width: 100%;
       }
@@ -86,7 +78,7 @@ const Container = styled.div`
       `:null
     };
 
-    ${notFluidLG?`
+    ${notFluidLG? css`
       ${mq.lg}{
           max-width: ${sizeLG};
           margin: 0 auto;
@@ -98,7 +90,7 @@ const Container = styled.div`
       `:null
     };
 
-    ${fluidLG?`
+    ${fluidLG? css`
       ${mq.lg}{
           max-width: 100%;
       }
@@ -108,7 +100,7 @@ const Container = styled.div`
       `:null
     };
 
-    ${notFluidXL?`
+    ${notFluidXL? css`
       ${mq.xl}{
           max-width: ${sizeXL};
           margin: 0 auto;
@@ -116,7 +108,7 @@ const Container = styled.div`
       `:null
     };
 
-    ${fluidXL?`
+    ${fluidXL? css`
       ${mq.xl}{
           max-width: 100%;
       }
@@ -125,9 +117,9 @@ const Container = styled.div`
 
     // Adds container top and bottom space
     ${ 
-      space=="small"?`margin-top: ${spaceSizes.s}; margin-bottom: ${spaceSizes.s};`:
-      space=="medium"?`margin-top: ${spaceSizes.m}; margin-bottom: ${spaceSizes.m};`: 
-      space=="large"?`margin-top: ${spaceSizes.l}; margin-bottom: ${spaceSizes.l};`:
+      space=="small"? css`margin-top: ${spaceSizes.s}; margin-bottom: ${spaceSizes.s};`:
+      space=="medium"? css`margin-top: ${spaceSizes.m}; margin-bottom: ${spaceSizes.m};`: 
+      space=="large"? css`margin-top: ${spaceSizes.l}; margin-bottom: ${spaceSizes.l};`:
       ``
     }
     
