@@ -14,11 +14,11 @@ const mq = {
     mdv: mqVal.md,
     lgv: mqVal.lg,
     xlv: mqVal.xl,
-    xs:css`@media (min-width: ${mqVal.xs}px)`, 
-    sm:css`@media (min-width: ${mqVal.sm}px)`, 
-    md:css`@media (min-width: ${mqVal.md}px)`, 
-    lg:css`@media (min-width: ${mqVal.lg}px)`, 
-    xl:css`@media (min-width: ${mqVal.xl}px)`, 
+    xs:`@media (min-width: ${mqVal.xs}px)`, 
+    sm:`@media (min-width: ${mqVal.sm}px)`, 
+    md:`@media (min-width: ${mqVal.md}px)`, 
+    lg:`@media (min-width: ${mqVal.lg}px)`, 
+    xl:`@media (min-width: ${mqVal.xl}px)`, 
 }
 
 export default mq;
