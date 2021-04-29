@@ -2,10 +2,24 @@ import React from "react";
 import {css, styled, connect} from "frontity";
 import mq from "./mq";
 
-const RowComponent = (props) => {
+const RowComponent = ({
+    alignCenter=false, alignSMCenter=false, alignMDCenter=false, alignLGCenter=false, alignXLCenter=false,
+    alignItems=false, alignSMItems=false, alignMDItems=false, alignLGItems=false, alignXLItems=false, 
+    reverse=false, reverseSM=false, reverseMD=false, reverseLG=false, reverseXL=false,
+    alignContent=false, alignSMContent=false, alignMDContent=false, alignLGContent=false, alignXLContent=false,
+    justifyContent=false, justifySMContent=false, justifyMDContent=false, justifyLGContent=false, justifyXLContent=false,
+    className, children
+}) => {
 
-  return <Row {...props}>
-    {props.children}
+  return <Row {...{
+    alignCenter, alignSMCenter, alignMDCenter, alignLGCenter, alignXLCenter,
+    alignItems, alignSMItems, alignMDItems, alignLGItems, alignXLItems, 
+    reverse, reverseSM, reverseMD, reverseLG, reverseXL,
+    alignContent, alignSMContent, alignMDContent, alignLGContent, alignXLContent,
+    justifyContent, justifySMContent, justifyMDContent, justifyLGContent, justifyXLContent,
+    className
+  }}>
+    {children}
   </Row>
 
 }
@@ -14,11 +28,11 @@ export default connect(RowComponent);
 
 const Row = styled.div`
   ${({
-    alignCenter=false, alignSMCenter=false, alignMDCenter=false, alignLGCenter=false, alignXLCenter=false,
-    alignItems=false, alignSMItems=false, alignMDItems=false, alignLGItems=false, alignXLItems=false, 
-    reverse=false, reverseSM=false, reverseMD=false, reverseLG=false, reverseXL=false,
-    alignContent=false, alignSMContent=false, alignMDContent=false, alignLGContent=false, alignXLContent=false,
-    justifyContent=false, justifySMContent=false, justifyMDContent=false, justifyLGContent=false, justifyXLContent=false,
+    alignCenter, alignSMCenter, alignMDCenter, alignLGCenter, alignXLCenter,
+    alignItems, alignSMItems, alignMDItems, alignLGItems, alignXLItems, 
+    reverse, reverseSM, reverseMD, reverseLG, reverseXL,
+    alignContent, alignSMContent, alignMDContent, alignLGContent, alignXLContent,
+    justifyContent, justifySMContent, justifyMDContent, justifyLGContent, justifyXLContent,
   })=>css`
     display: flex;
     flex-wrap: wrap;

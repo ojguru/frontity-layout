@@ -2,10 +2,16 @@ import React from "react";
 import {css, styled, connect} from "frontity";
 import mq from "./mq";
 
-const ContainerComponent = (props) =>{
+const ContainerComponent = ({
+  fluid=false, fluidMD=false, fluidLG=false, fluidXL=false, notFluidMD=false, notFluidLG=false, notFluidXL=false,
+  noGutters=false, space=false, sizeSM="540px", sizeMD="720px", sizeLG="960px", sizeXL="1140px", className, children
+}) =>{
 
-  return <Container {...props}>
-    {props.children}
+  return <Container {...{
+    fluid, fluidMD, fluidLG, fluidXL, notFluidMD, notFluidLG, notFluidXL,
+    noGutters, space, sizeSM, sizeMD, sizeLG, sizeXL, className
+  }}>
+    {children}
   </Container>
   
 } 
@@ -20,8 +26,8 @@ const spaceSizes = {
 
 const Container = styled.div`
   ${({
-    fluid=false, fluidMD=false, fluidLG=false, fluidXL=false, notFluidMD=false, notFluidLG=false, notFluidXL=false,
-    noGutters=false, space=false, sizeSM="540px", sizeMD="720px", sizeLG="960px", sizeXL="1140px"
+    fluid, fluidMD, fluidLG, fluidXL, notFluidMD, notFluidLG, notFluidXL,
+    noGutters, space, sizeSM, sizeMD, sizeLG, sizeXL
   })=>css`
     width: 100%;
     max-width: 100%;

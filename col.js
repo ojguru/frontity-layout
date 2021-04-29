@@ -4,9 +4,44 @@ import mq from "./mq";
 
 const colSize = size => (parseInt(size)>0 && parseInt(size)<=12 ?(100/12*parseInt(size))+"%": `100%`);
 
-const ColComponent = (props) => {
-    
-    return <Col {...props }>{props.children}</Col>
+const ColComponent = ({
+    size, sizeSM, sizeMD, sizeLG, sizeXL,
+    order, orderSM, orderMD, orderLG, orderXL,
+    noGutters, noGuttersSM, noGuttersMD, noGuttersLG, noGuttersXL,
+    noLGutters, noLGuttersSM, noLGuttersMD, noLGuttersLG, noLGuttersXL,
+    noRGutters, noRGuttersSM, noRGuttersMD, noRGuttersLG, noRGuttersXL,
+    gutters, guttersSM, guttersMD, guttersLG, guttersXL,
+    lGutters, lGuttersSM, lGuttersMD, lGuttersLG, lGuttersXL,
+    rGutters, rGuttersSM, rGuttersMD, rGuttersLG, rGuttersXL,
+    mxAuto, mxSMAuto, mxMDAuto, mxLGAuto, mxXLAuto,
+    mlAuto, mlSMAuto, mlMDAuto, mlLGAuto, mlXLAuto,
+    mrAuto, mrSMAuto, mrMDAuto, mrLGAuto, mrXLAuto,
+    hidden, hiddenSM, hiddenMD, hiddenLG, hiddenXL,
+    visible, visibleSM, visibleMD, visibleLG, visibleXL,
+    alignSelf, alignSMSelf, alignMDSelf, alignLGSelf, alignXLSelf,
+    alignCenter, alignSMCenter, alignMDCenter, alignLGCenter, alignXLCenter,
+    zIndex, zIndexSM, zIndexMD, zIndexLG, zIndexXL, className, children
+}) => {
+
+    return <Col {...{
+        size, sizeSM, sizeMD, sizeLG, sizeXL,
+        order, orderSM, orderMD, orderLG, orderXL,
+        noGutters, noGuttersSM, noGuttersMD, noGuttersLG, noGuttersXL,
+        noLGutters, noLGuttersSM, noLGuttersMD, noLGuttersLG, noLGuttersXL,
+        noRGutters, noRGuttersSM, noRGuttersMD, noRGuttersLG, noRGuttersXL,
+        gutters, guttersSM, guttersMD, guttersLG, guttersXL,
+        lGutters, lGuttersSM, lGuttersMD, lGuttersLG, lGuttersXL,
+        rGutters, rGuttersSM, rGuttersMD, rGuttersLG, rGuttersXL,
+        mxAuto, mxSMAuto, mxMDAuto, mxLGAuto, mxXLAuto,
+        mlAuto, mlSMAuto, mlMDAuto, mlLGAuto, mlXLAuto,
+        mrAuto, mrSMAuto, mrMDAuto, mrLGAuto, mrXLAuto,
+        hidden, hiddenSM, hiddenMD, hiddenLG, hiddenXL,
+        visible, visibleSM, visibleMD, visibleLG, visibleXL,
+        alignSelf, alignSMSelf, alignMDSelf, alignLGSelf, alignXLSelf,
+        alignCenter, alignSMCenter, alignMDCenter, alignLGCenter, alignXLCenter,
+        zIndex, zIndexSM, zIndexMD, zIndexLG, zIndexXL, className
+    }}>{children}</Col>
+
 }
 
 export default connect(ColComponent);
