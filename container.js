@@ -4,12 +4,12 @@ import mq from "./mq";
 
 const ContainerComponent = ({
   fluid=false, fluidMD=false, fluidLG=false, fluidXL=false, notFluidMD=false, notFluidLG=false, notFluidXL=false,
-  noGutters=false, space=false, sizeSM="540px", sizeMD="720px", sizeLG="960px", sizeXL="1140px", className, children
+  noGutters=false, space=false, sizeSM="540px", sizeMD="720px", sizeLG="960px", sizeXL="1140px", className, children, as
 }) =>{
 
   return <Container {...{
     fluid, fluidMD, fluidLG, fluidXL, notFluidMD, notFluidLG, notFluidXL,
-    noGutters, space, sizeSM, sizeMD, sizeLG, sizeXL, className
+    noGutters, space, sizeSM, sizeMD, sizeLG, sizeXL, className, as
   }}>
     {children}
   </Container>

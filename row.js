@@ -8,7 +8,7 @@ const RowComponent = ({
     reverse=false, reverseSM=false, reverseMD=false, reverseLG=false, reverseXL=false,
     alignContent=false, alignSMContent=false, alignMDContent=false, alignLGContent=false, alignXLContent=false,
     justifyContent=false, justifySMContent=false, justifyMDContent=false, justifyLGContent=false, justifyXLContent=false,
-    className, children
+    className, children, as
 }) => {
 
   return <Row {...{
@@ -17,7 +17,7 @@ const RowComponent = ({
     reverse, reverseSM, reverseMD, reverseLG, reverseXL,
     alignContent, alignSMContent, alignMDContent, alignLGContent, alignXLContent,
     justifyContent, justifySMContent, justifyMDContent, justifyLGContent, justifyXLContent,
-    className
+    className, as
   }}>
     {children}
   </Row>
