@@ -1,6 +1,6 @@
 {
   "name": "@osirispp/frontity-layout",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Sistema de layout para usar en frontity",
   "main": "index.js",
   "scripts": {
