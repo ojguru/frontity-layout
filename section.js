@@ -1,9 +1,8 @@
 import React from "react";
-import {styled, connect} from "frontity";
+import {styled} from "frontity";
 import mq from "./mq";
 
 const Section = ({
-  state, children, className, id, as, 
   thin, small, medium, large, 
   mediumTop, mediumBottom,
   spaceTopNone, spaceTopNoneMD, spaceBottomNone, spaceNone,
@@ -13,7 +12,7 @@ const Section = ({
 
   return (
     <SectionComponent {...{
-      className, id, as, thin, small, medium, large, 
+      thin, small, medium, large, 
       mediumTop, mediumBottom,
       spaceTopNone, spaceTopNoneMD, spaceBottomNone, spaceNone,
       zIndex, zIndexSM, zIndexMD, zIndexLG, zIndexXL,
@@ -22,7 +21,7 @@ const Section = ({
   );
 }
 
-export default connect(Section);
+export default Section;
 
 const SectionComponent = styled.section`
   display: block;

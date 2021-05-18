@@ -22,7 +22,7 @@ const RowComponent = ({
 
 }
 
-export default connect(RowComponent);
+export default RowComponent;
 
 const Row = styled.div`
   ${({

@@ -16,7 +16,7 @@ const ContainerComponent = ({
   
 } 
 
-export default connect(ContainerComponent);
+export default ContainerComponent;
 
 const spaceSizes = {
   s: "2rem",

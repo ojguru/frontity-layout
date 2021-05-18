@@ -46,7 +46,7 @@ const ColComponent = ({
 
 }
 
-export default connect(ColComponent);
+export default ColComponent;
 
 const Col = styled.div`
     ${({
