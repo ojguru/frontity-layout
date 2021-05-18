@@ -7,7 +7,8 @@ const Section = ({
   thin, small, medium, large, 
   mediumTop, mediumBottom,
   spaceTopNone, spaceTopNoneMD, spaceBottomNone, spaceNone,
-  zIndex, zIndexSM, zIndexMD, zIndexLG, zIndexXL
+  zIndex, zIndexSM, zIndexMD, zIndexLG, zIndexXL,
+  ...props
 }) => {
 
   return (
@@ -15,8 +16,9 @@ const Section = ({
       className, id, as, thin, small, medium, large, 
       mediumTop, mediumBottom,
       spaceTopNone, spaceTopNoneMD, spaceBottomNone, spaceNone,
-      zIndex, zIndexSM, zIndexMD, zIndexLG, zIndexXL
-    }}>{children}</SectionComponent>
+      zIndex, zIndexSM, zIndexMD, zIndexLG, zIndexXL,
+      ...props
+    }} />
   );
 }
 

@@ -20,7 +20,8 @@ const ColComponent = ({
     visible, visibleSM, visibleMD, visibleLG, visibleXL,
     alignSelf, alignSMSelf, alignMDSelf, alignLGSelf, alignXLSelf,
     alignCenter, alignSMCenter, alignMDCenter, alignLGCenter, alignXLCenter,
-    zIndex, zIndexSM, zIndexMD, zIndexLG, zIndexXL, className, children, as
+    zIndex, zIndexSM, zIndexMD, zIndexLG, zIndexXL, 
+    ...props
 }) => {
 
     return <Col {...{
@@ -39,8 +40,9 @@ const ColComponent = ({
         visible, visibleSM, visibleMD, visibleLG, visibleXL,
         alignSelf, alignSMSelf, alignMDSelf, alignLGSelf, alignXLSelf,
         alignCenter, alignSMCenter, alignMDCenter, alignLGCenter, alignXLCenter,
-        zIndex, zIndexSM, zIndexMD, zIndexLG, zIndexXL, className, as
-    }}>{children}</Col>
+        zIndex, zIndexSM, zIndexMD, zIndexLG, zIndexXL,
+        ...props
+    }} />
 
 }
 

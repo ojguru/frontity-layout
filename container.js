@@ -4,15 +4,15 @@ import mq from "./mq";
 
 const ContainerComponent = ({
   fluid=false, fluidMD=false, fluidLG=false, fluidXL=false, notFluidMD=false, notFluidLG=false, notFluidXL=false,
-  noGutters=false, space=false, sizeSM="540px", sizeMD="720px", sizeLG="960px", sizeXL="1140px", className, children, as
+  noGutters=false, space=false, sizeSM="540px", sizeMD="720px", sizeLG="960px", sizeXL="1140px", 
+  ...props
 }) =>{
 
   return <Container {...{
     fluid, fluidMD, fluidLG, fluidXL, notFluidMD, notFluidLG, notFluidXL,
-    noGutters, space, sizeSM, sizeMD, sizeLG, sizeXL, className, as
-  }}>
-    {children}
-  </Container>
+    noGutters, space, sizeSM, sizeMD, sizeLG, sizeXL, 
+    ...props
+  }} />
   
 } 
 
